@@ -37,7 +37,7 @@ endif
 " 允许使用鼠标, normal生效，a则是全模式生效
 set mouse=n
 
-" colour compatibility
+" color compatibility
 let &t_ut=''
 
 " auto change work dir
