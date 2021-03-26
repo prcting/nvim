@@ -191,6 +191,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " set <LEADER> as <SPACE>
 let mapleader="\<Space>"
 
+" set ; as :
+noremap ; :
+
 " disable the default s key
 noremap s <nop>
 
