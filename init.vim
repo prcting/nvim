@@ -22,7 +22,7 @@ endif
 "=== Base
 "===
 if &compatible
-	" 不要兼容vi
+	" Don't compatible vi
 	set nocompatible
 endif
 
@@ -35,7 +35,7 @@ if has('autocmd')
 	filetype plugin indent on
 endif
 
-" 允许使用鼠标, normal生效，a则是全模式生效
+" in normal can use mouse
 set mouse=n
 
 " color compatibility
@@ -159,9 +159,9 @@ set inccommand=split
 " Don't pass messages to |ins-completion-menu|
 set shortmess+=c
 
-" 文件在外部被修改过，重新读入
+" file auto read in
 set autoread
-" 自动写回
+" file auto write to
 set autowrite
 
 " smart auto complete me
