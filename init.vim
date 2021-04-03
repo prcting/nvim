@@ -612,6 +612,7 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-floaterm',
   \ 'coc-html',
+  \ 'coc-html-css-support',
   \ 'coc-css',
   \ 'coc-stylelintplus',
   \ 'coc-emoji',
