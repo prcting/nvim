@@ -6,7 +6,7 @@
 "
 "
 " Github: Prcting
-" Maintainer: Ding
+" Maintainer: Steven
 
 
 " auto-install vim-plug
@@ -204,7 +204,7 @@ noremap <C-q> :qa<CR>
 noremap S :w<CR>
 
 " open the vimrc file anytime
-noremap <LEADER>rc :e ~/.config/nvim/init.vim<CR>
+noremap <LEADER>rc :e $HOME/.config/nvim/init.vim<CR>
 
 " undo operations
 noremap l u
