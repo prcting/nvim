@@ -6,7 +6,7 @@
 "
 "
 " Github: Prcting
-" Maintainer: Steven
+" Maintainer: Scott
 
 
 " auto-install vim-plug
