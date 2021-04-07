@@ -447,10 +447,10 @@ call plug#begin('$HOME/.cache/vim/plugins/')
 	Plug 'google/vim-glaive'
 
 	" Taglist
+	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'liuchengxu/vista.vim'
 
 	" General Highlighter
-	Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'RRethy/vim-illuminate'
 
 	" start screen
