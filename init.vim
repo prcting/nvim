@@ -87,23 +87,23 @@ set ttyfast
 " delay to draw（improve performance）
 set lazyredraw
 
-" display hidden character
-set list
+" Use spaces instead of tabs
+set expandtab
 
-" display space
-set listchars=tab:\|\ ,trail:▫
+" Be smart when using tabs ;)
+set smarttab
 
-" set tab width
-set tabstop=2
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
 
-" set shiftwidth
-set shiftwidth=2
+" Linebreak on 500 characters
+set lbr
+set tw=500
 
-" expandtab width
-set softtabstop=2
-
-" no expandtab
-set noexpandtab
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
 
 " display status
 set laststatus=2
@@ -137,9 +137,6 @@ set visualbell
 
 " view options
 set viewoptions=cursor,folds,slash,unix
-
-" word wrap
-set wrap
 
 " space display
 set tw=0
