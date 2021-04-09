@@ -11,10 +11,10 @@
 
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
+    "autocmd VimEnter * PlugInstall
+    autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 
@@ -22,17 +22,17 @@ endif
 "=== Base
 "===
 if &compatible
-	" Don't compatible vi
-	set nocompatible
+    " Don't compatible vi
+    set nocompatible
 endif
 
 if has('syntax')
-	syntax enable
-	syntax on
+    syntax enable
+    syntax on
 endif
 
 if has('autocmd')
-	filetype plugin indent on
+    filetype plugin indent on
 endif
 
 " in normal can use mouse
@@ -166,12 +166,12 @@ set completeopt=longest,noinsert,menuone,noselect,preview
 
 " file coding
 if has('multi_byte')
-	" in vim
-	set encoding=utf-8
-	" file
-	set fileencoding=utf-8
-	" auto
-	set fileencodings=ucs-bom,utf-8,gbk,gb18030,big5,euc-jp,latin1
+    " in vim
+    set encoding=utf-8
+    " file
+    set fileencoding=utf-8
+    " auto
+    set fileencodings=ucs-bom,utf-8,gbk,gb18030,big5,euc-jp,latin1
 endif
 
 " cursor change line
@@ -373,44 +373,44 @@ noremap <LEADER>sw :set wrap<CR>
 " compile function
 noremap <F5> :call CompileRun()<CR>
 func! CompileRun()
-	exec "w"
-	if &filetype == 'c'
-		exec "!g++ % -o %<"
-		exec "!time ./%<"
-	elseif &filetype == 'cpp'
-		set splitbelow
-		exec "!g++ -std=c++11 % -Wall -o %<"
-		:sp
-		:res -15
-		:term ./%<
-	elseif &filetype == 'java'
-		exec "!javac %"
-		exec "!time java %<"
-	elseif &filetype == 'sh'
-		:!time bash %
-	elseif &filetype == 'python'
-		set splitbelow
-		:sp
-		:term python3 %
-	elseif &filetype == 'html'
-		silent! exec "!".g:mkdp_browser." % &"
-	elseif &filetype == 'markdown'
-		exec "MarkdownPreview"
-	elseif &filetype == 'tex'
-		silent! exec "VimtexStop"
-		silent! exec "VimtexCompile"
-	elseif &filetype == 'dart'
-		exec "CocCommand flutter.run -d ".g:flutter_default_device
-		CocCommand flutter.dev.openDevLog
-	elseif &filetype == 'javascript'
-		set splitbelow
-		:sp
-		:term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
-	elseif &filetype == 'go'
-		set splitbelow
-		:sp
-		:term go run .
-	endif
+    exec "w"
+    if &filetype == 'c'
+        exec "!g++ % -o %<"
+        exec "!time ./%<"
+    elseif &filetype == 'cpp'
+        set splitbelow
+        exec "!g++ -std=c++11 % -Wall -o %<"
+        :sp
+        :res -15
+        :term ./%<
+    elseif &filetype == 'java'
+        exec "!javac %"
+        exec "!time java %<"
+    elseif &filetype == 'sh'
+        :!time bash %
+    elseif &filetype == 'python'
+        set splitbelow
+        :sp
+        :term python3 %
+    elseif &filetype == 'html'
+        silent! exec "!".g:mkdp_browser." % &"
+    elseif &filetype == 'markdown'
+        exec "MarkdownPreview"
+    elseif &filetype == 'tex'
+        silent! exec "VimtexStop"
+        silent! exec "VimtexCompile"
+    elseif &filetype == 'dart'
+        exec "CocCommand flutter.run -d ".g:flutter_default_device
+        CocCommand flutter.dev.openDevLog
+    elseif &filetype == 'javascript'
+        set splitbelow
+        :sp
+        :term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
+    elseif &filetype == 'go'
+        set splitbelow
+        :sp
+        :term go run .
+    endif
 endfunc
 
 
@@ -418,61 +418,61 @@ endfunc
 " === Install Plugins with Vim-Plug
 " ===
 call plug#begin('$HOME/.cache/vim/plugins/')
-	" Better Comments
-	Plug 'tpope/vim-commentary'
+    " Better Comments
+    Plug 'tpope/vim-commentary'
 
-	" Status line
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'ojroques/vim-scrollstatus'
+    " Status line
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'ojroques/vim-scrollstatus'
 
-	" Undo Tree
-	Plug 'mbbill/undotree'
+    " Undo Tree
+    Plug 'mbbill/undotree'
 	
-	" Rainbow
-	Plug 'luochen1990/rainbow'
+    " Rainbow
+    Plug 'luochen1990/rainbow'
 
-	" Themes
-	Plug 'crusoexia/vim-monokai'
+    " Themes
+    Plug 'crusoexia/vim-monokai'
 
-	" vim-snippets
-	Plug 'honza/vim-snippets'
+    " vim-snippets
+    Plug 'honza/vim-snippets'
 
-	" Autoformat
-	Plug 'google/vim-maktaba'
-	Plug 'google/vim-codefmt'
-	Plug 'google/vim-glaive'
+    " Autoformat
+    Plug 'google/vim-maktaba'
+    Plug 'google/vim-codefmt'
+    Plug 'google/vim-glaive'
 
-	" Taglist
-	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-	Plug 'liuchengxu/vista.vim'
+    " Taglist
+    Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+    Plug 'liuchengxu/vista.vim'
 
-	" General Highlighter
-	Plug 'RRethy/vim-illuminate'
+    " General Highlighter
+    Plug 'RRethy/vim-illuminate'
 
-	" start screen
-	Plug 'mhinz/vim-startify'
+    " start screen
+    Plug 'mhinz/vim-startify'
 
-	" HTML, CSS, JavaScript, Typescript, PHP, JSON, etc.
-	Plug 'elzr/vim-json'
-	Plug 'neoclide/jsonc.vim'
-	Plug 'othree/html5.vim'
-	Plug 'alvan/vim-closetag'
-	" Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-	" Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
-	" Plug 'pangloss/vim-javascript', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-	Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-	" Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-	" Plug 'jelera/vim-javascript-syntax', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-	"Plug 'jaxbot/browserlink.vim'
-	Plug 'HerringtonDarkholme/yats.vim'
-	" Plug 'posva/vim-vue'
-	" Plug 'evanleck/vim-svelte', {'branch': 'main'}
-	" Plug 'leafOfTree/vim-svelte-plugin'
-	" Plug 'leafgarland/typescript-vim'
+    " HTML, CSS, JavaScript, Typescript, PHP, JSON, etc.
+    Plug 'elzr/vim-json'
+    Plug 'neoclide/jsonc.vim'
+    Plug 'othree/html5.vim'
+    Plug 'alvan/vim-closetag'
+    " Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+    " Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
+    " Plug 'pangloss/vim-javascript', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+    Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+    " Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+    " Plug 'jelera/vim-javascript-syntax', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+    "Plug 'jaxbot/browserlink.vim'
+    Plug 'HerringtonDarkholme/yats.vim'
+    " Plug 'posva/vim-vue'
+    " Plug 'evanleck/vim-svelte', {'branch': 'main'}
+    " Plug 'leafOfTree/vim-svelte-plugin'
+    " Plug 'leafgarland/typescript-vim'
 
-	" Intellisense
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Intellisense
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
@@ -520,17 +520,17 @@ hi illuminatedWord cterm=undercurl gui=undercurl
 " === Google Autoformat
 " ===
 augroup autoformat_settings
-	" autocmd FileType bzl AutoFormatBuffer buildifier
-	" autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
-	" autocmd FileType dart AutoFormatBuffer dartfmt
-	" autocmd FileType go AutoFormatBuffer gofmt
-	" autocmd FileType gn AutoFormatBuffer gn
-	" autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
-	" autocmd FileType java AutoFormatBuffer google-java-format
-	" autocmd FileType python AutoFormatBuffer yapf
-	" Alternative: autocmd FileType python AutoFormatBuffer autopep8
-	" autocmd FileType rust AutoFormatBuffer rustfmt
-	" autocmd FileType vue AutoFormatBuffer prettier
+    " autocmd FileType bzl AutoFormatBuffer buildifier
+    " autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
+    " autocmd FileType dart AutoFormatBuffer dartfmt
+    " autocmd FileType go AutoFormatBuffer gofmt
+    " autocmd FileType gn AutoFormatBuffer gn
+    " autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+    " autocmd FileType java AutoFormatBuffer google-java-format
+    " autocmd FileType python AutoFormatBuffer yapf
+    " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+    " autocmd FileType rust AutoFormatBuffer rustfmt
+    " autocmd FileType vue AutoFormatBuffer prettier
 augroup END
 
 
@@ -567,10 +567,10 @@ let g:undotree_WindowLayout = 2
 let g:undotree_DiffpanelHeight = 8
 let g:undotree_SplitWidth = 24
 function g:Undotree_CustomMap()
-	nmap <buffer> u <plug>UndotreeNextState
-	nmap <buffer> e <plug>UndotreePreviousState
-	nmap <buffer> U 5<plug>UndotreeNextState
-	nmap <buffer> E 5<plug>UndotreePreviousState
+    nmap <buffer> u <plug>UndotreeNextState
+    nmap <buffer> e <plug>UndotreePreviousState
+    nmap <buffer> U 5<plug>UndotreeNextState
+    nmap <buffer> E 5<plug>UndotreePreviousState
 endfunc
 
 
@@ -578,12 +578,12 @@ endfunc
 " === Commentary
 " ===
 function! Comment()
-  if (mode() == "n" )
-    execute "Commentary"
-  else    
-    execute "'<,'>Commentary"
-  endif
- endfunction
+    if (mode() == "n" )
+        execute "Commentary"
+    else    
+        execute "'<,'>Commentary"
+    endif
+endfunction
 vnoremap <silent> <space>/ :call Comment()
 
 
