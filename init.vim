@@ -203,9 +203,6 @@ noremap S :w<CR>
 " open the vimrc file anytime
 noremap <LEADER>rc :e $HOME/.config/nvim/init.vim<CR>
 
-" undo operations
-noremap l u
-
 " insert Key
 noremap k i
 noremap K I
@@ -234,23 +231,23 @@ noremap <silent> <LEADER>o za
 " ===
 " new cursor movement (the default arrow keys are used for resizing windows)
 "     ^
-"     u
-" < n   i >
 "     e
+" < h   i >
+"     n
 "     v
-noremap <silent> u k
-noremap <silent> n h
-noremap <silent> e j
+"noremap <silent> h h
+noremap <silent> n j
+noremap <silent> e k
 noremap <silent> i l
-noremap <silent> gu gk
-noremap <silent> ge gj
+noremap <silent> gn gj
+noremap <silent> ge gk
 
 " U/E keys for 5 times u/e (faster navigation)
-noremap <silent> U 5k
-noremap <silent> E 5j
+noremap <silent> N 5j
+noremap <silent> E 5k
 
 " N key: go to the start of the line
-noremap <silent> N 0
+noremap <silent> H 0
 " I key: go to the end of the line
 noremap <silent> I $
 
@@ -259,7 +256,7 @@ noremap W 5w
 noremap B 5b
 
 " set h (same as n, cursor left) to 'end of word'
-noremap h e
+noremap l e
 
 " Ctrl + U or E will move up/down the view port without moving the cursor
 noremap <C-U> 5<C-y>
