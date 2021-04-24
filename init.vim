@@ -204,8 +204,8 @@ noremap S :w<CR>
 noremap <LEADER>rc :e $HOME/.config/nvim/init.vim<CR>
 
 " insert Key
-noremap k i
-noremap K I
+noremap l i
+noremap L I
 
 " make Y to copy till the end of the line
 nnoremap Y y$
@@ -256,7 +256,7 @@ noremap W 5w
 noremap B 5b
 
 " set h (same as n, cursor left) to 'end of word'
-noremap l e
+noremap k e
 
 " Ctrl + U or E will move up/down the view port without moving the cursor
 noremap <C-U> 5<C-y>
