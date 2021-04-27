@@ -204,8 +204,11 @@ noremap S :w<CR>
 noremap <LEADER>rc :e $HOME/.config/nvim/init.vim<CR>
 
 " insert Key
-noremap l i
-noremap L I
+noremap u i
+noremap U I
+
+" Undo operations
+noremap l u
 
 " make Y to copy till the end of the line
 nnoremap Y y$
